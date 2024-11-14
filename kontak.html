@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontak kami untuk informasi lebih lanjut tentang wisata Malang. Kami siap membantu menjawab semua pertanyaan Anda.">
+    <title>Kontak Kami - Wisata Malang</title>
+    <link rel="shortcut icon" href="images/malang_icon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button button:hover {
+            background-color: #388e3c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function kirimPesan() {
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let pesan = document.getElementById('pesan').value;
+
+            if(nama === "" || email === "" || pesan === "") {
+                alert("Semua kolom harus diisi!");
+                return false;
+            }
+
+            alert("Terima kasih, " + nama + "! Pesan Anda telah terkirim.");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Kontak Kami</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Hubungi Kami</h2>
+            <p>
+                Jika Anda memiliki pertanyaan, saran, atau butuh informasi lebih lanjut mengenai wisata di Malang, jangan ragu untuk menghubungi kami. Kami akan dengan senang hati membantu!
+            </p>
+
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda">
+                </div>
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda di sini"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit" onclick="kirimPesan()">Kirim Pesan</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="button">
+            <a href="index.html">
+                <button>Kembali ke Halaman Utama</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Wisata Malang. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
